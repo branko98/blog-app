@@ -21,16 +21,19 @@
         </ul>
       </div>
     </nav>
+    <router-view />
   </div>
 </template>
 
 <script>
 import HelloWorld from "./components/HelloWorld.vue";
+import AppPosts from "./components/AppPosts.vue";
 
 export default {
   name: "app",
   components: {
-    HelloWorld
+    HelloWorld,
+    AppPosts
   }
 };
 </script>
