@@ -10,16 +10,16 @@ export default class PostsService {
     }
 
     addPost(post) {
-        return axios.post('posts',post)
+        return axios.post('posts', post)
     }
 
-    getPost(id){
+    getPost(id) {
         return axios.get(`/posts/${id}`)
     }
 
-    // editPost(post, id){
-    //     return axios.put('/posts/' + id, post)
-    // }
+    editPost(post, id) {
+        return axios.put('/posts/' + id, post)
+    }
 
     // deletePost(id){
     //     return axios.delete('/posts/' + id);
