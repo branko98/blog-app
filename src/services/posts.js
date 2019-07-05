@@ -13,9 +13,9 @@ export default class PostsService {
     //     return axios.post('posts',post)
     // }
 
-    // getPost(id){
-    //     return axios.get(`/posts/${id}`)
-    // }
+    getPost(id){
+        return axios.get(`/posts/${id}`)
+    }
 
     // editPost(post, id){
     //     return axios.put('/posts/' + id, post)

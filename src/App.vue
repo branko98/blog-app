@@ -28,12 +28,14 @@
 <script>
 import HelloWorld from "./components/HelloWorld.vue";
 import AppPosts from "./components/AppPosts.vue";
+import SinglePost from "./components/SinglePost.vue";
 
 export default {
   name: "app",
   components: {
     HelloWorld,
-    AppPosts
+    AppPosts,
+    SinglePost
   }
 };
 </script>

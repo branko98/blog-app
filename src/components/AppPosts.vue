@@ -4,6 +4,7 @@
       <li v-for="(post, index) in posts" :key="index">
         <h3>{{ post.title}}</h3>
         <p>{{ post.text }}</p>
+        <router-link class="btn-primary btn" :to="`/posts/${post.id}`">View post</router-link>
       </li>
     </ul>
   </div>
@@ -25,7 +26,7 @@ export default {
             this.posts = response.data;
         }) .catch(e => {
             this.errors.push(e)
-        }),
+        })
     }
 }
 </script>
