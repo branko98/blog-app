@@ -4,6 +4,8 @@
       <li v-for="(post, index) in posts" :key="index">
         <h3>{{ post.title}}</h3>
         <p>{{ post.text }}</p>
+        <!-- <p>Comments: </p> -->
+        {{ diffForHumans(post.createdAt )}} </br>
         <router-link class="btn-primary btn" :to="`/posts/${post.id}`">View post</router-link>
         <button class="btn btn-danger" @click="handleDelete(post.id)">Delte post</button>
         <router-link class="btn-light btn" :to="`/edit/${post.id}`">Edit post</router-link>
@@ -15,8 +17,10 @@
 
 <script>
 import { postsService } from "../services/posts";
+import { dateMixin } from "../mixins/DateMixin"
 
 export default {
+    mixins: [ dateMixin ],
   data() {
     return {
       posts: []

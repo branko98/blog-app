@@ -33,6 +33,7 @@ import HelloWorld from "./components/HelloWorld.vue";
 import AppPosts from "./components/AppPosts.vue";
 import SinglePost from "./components/SinglePost.vue";
 import AddPost from "./components/AddPost.vue";
+import AddComment from "./components/AddComment.vue";
 
 export default {
   name: "app",
@@ -40,7 +41,8 @@ export default {
     HelloWorld,
     AppPosts,
     SinglePost,
-    AddPost
+    AddPost,
+    AddComment
   }
 };
 </script>

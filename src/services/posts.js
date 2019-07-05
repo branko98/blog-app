@@ -24,6 +24,15 @@ export default class PostsService {
     deletePost(id){
         return axios.delete('/posts/' + id);
     }
+
+    addComment(comment, postId){
+        return axios.post(`posts/${postId}/comments/`, comment);
+    }
+
+    getComments(postId){
+        console.log(postId)
+        return axios.get(`posts/${postId}/comments`)
+    }
 }
 
 export const postsService = new PostsService()
