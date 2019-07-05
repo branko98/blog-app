@@ -16,7 +16,6 @@ export default {
         }
     },
     created() {
-        console.log(123)
         postsService.getPost(this.id)
         .then(response => {
             this.post = response.data;

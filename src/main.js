@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import App from './App.vue'
 import AppPosts from '@/components/AppPosts'
 import SinglePost from '@/components/SinglePost'
+import AddPost from '@/components/AddPost'
 
 Vue.use(VueRouter)
 
@@ -10,6 +11,7 @@ const routes = [
   { path: '/', component: AppPosts },
   { path: '/posts', component: AppPosts },
   { path: '/posts/:id', component: SinglePost },
+  { path: '/add', component: AddPost },
 ]
 
 const router = new VueRouter({

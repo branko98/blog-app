@@ -9,9 +9,9 @@ export default class PostsService {
         return axios.get('posts')
     }
 
-    // addPost(post) {
-    //     return axios.post('posts',post)
-    // }
+    addPost(post) {
+        return axios.post('posts',post)
+    }
 
     getPost(id){
         return axios.get(`/posts/${id}`)

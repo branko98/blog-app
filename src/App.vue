@@ -18,6 +18,9 @@
           <li class="nav-item">
             <a class="nav-link" href="/posts">Posts</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/add">Add</a>
+          </li>
         </ul>
       </div>
     </nav>
@@ -29,13 +32,15 @@
 import HelloWorld from "./components/HelloWorld.vue";
 import AppPosts from "./components/AppPosts.vue";
 import SinglePost from "./components/SinglePost.vue";
+import AddPost from "./components/AddPost.vue";
 
 export default {
   name: "app",
   components: {
     HelloWorld,
     AppPosts,
-    SinglePost
+    SinglePost,
+    AddPost
   }
 };
 </script>
