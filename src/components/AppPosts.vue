@@ -5,7 +5,9 @@
         <h3>{{ post.title}}</h3>
         <p>{{ post.text }}</p>
         <router-link class="btn-primary btn" :to="`/posts/${post.id}`">View post</router-link>
-        <router-link class="btn-primary btn" :to="`/edit/${post.id}`">Edit post</router-link>
+        <button class="btn btn-danger" @click="handleDelete(post.id)">Delte post</button>
+        <router-link class="btn-light btn" :to="`/edit/${post.id}`">Edit post</router-link>
+        
       </li>
     </ul>
   </div>
@@ -30,6 +32,14 @@ export default {
       .catch(e => {
         this.errors.push(e);
       });
+  },
+  methods:{
+      handleDelete(id){
+          postsService.deletePost(id)
+                .then(() => {
+                    this.posts = this.posts.filter(post => post.id !== id);
+                })
+      }
   }
 };
 </script>

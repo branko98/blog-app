@@ -21,9 +21,9 @@ export default class PostsService {
         return axios.put('/posts/' + id, post)
     }
 
-    // deletePost(id){
-    //     return axios.delete('/posts/' + id);
-    // }
+    deletePost(id){
+        return axios.delete('/posts/' + id);
+    }
 }
 
 export const postsService = new PostsService()
